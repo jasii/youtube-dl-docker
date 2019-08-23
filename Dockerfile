@@ -7,6 +7,6 @@ RUN set -xe \
                           python3 \
     && pip3 install youtube-dl
 
-WORKDIR /data
+WORKDIR /config
 
-RUN ["/bin/bash", "-c", "echo I am now using bash!"]
+RUN ["/bin/bash", "-c"]
