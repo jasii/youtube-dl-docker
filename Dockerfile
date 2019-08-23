@@ -9,6 +9,6 @@ RUN set -xe \
 
 WORKDIR /data
 
-COPY start.sh .
+COPY start.sh /start.sh
 
 ENTRYPOINT ["/bin/sh", "start.sh"]
