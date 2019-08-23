@@ -9,5 +9,4 @@ RUN set -xe \
 
 WORKDIR /data
 
-ENTRYPOINT ["youtube-dl"]
-CMD ["--help"]
+ENTRYPOINT ["/bin/bash"]
