@@ -1,8 +1,6 @@
-FROM lsiobase/alpine.python3:3.8
-WORKDIR /youtube-dl
+FROM lsiobase/python
+WORKDIR /data
 RUN pip3 install --upgrade pip && \
-    pip3 install --upgrade youtube-dl
-COPY --chown=abc:abc start.sh .
-RUN chmod +x ./start.sh
+    pip3 install --upgrade youtube-dl ffmpeg
 
-ENTRYPOINT ["./start.sh"]
+ENTRYPOINT ["youtube-dl"]
