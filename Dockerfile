@@ -9,4 +9,4 @@ RUN set -xe \
 
 WORKDIR /config
 
-RUN ["/bin/bash", "-c", "bash shell"]
+RUN ["/bin/bash", "-c", "echo I am now using bash!"]
