@@ -9,6 +9,4 @@ RUN set -xe \
 
 WORKDIR /data
 
-COPY start.sh /start.sh
-
-ENTRYPOINT ["/bin/sh", "start.sh"]
+RUN ["/bin/bash", "-c", "echo I am now using bash!"]
