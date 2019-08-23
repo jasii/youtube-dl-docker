@@ -1,6 +1,13 @@
-FROM lsiobase/python:3.10
+FROM lsiobase/alpine:3.10
+
+RUN set -xe \
+    && apk add --no-cache ca-certificates \
+                          ffmpeg \
+                          openssl \
+                          python3 \
+    && pip3 install youtube-dl
+
 WORKDIR /data
-RUN pip3 install --upgrade pip && \
-    pip3 install --upgrade youtube-dl ffmpeg
 
 ENTRYPOINT ["youtube-dl"]
+CMD ["--help"]
