@@ -6,7 +6,8 @@ RUN set -xe \
                           openssl \
                           python3 \
     && pip3 install youtube-dl
+RUN touch /etc/youtube-dl.conf
 
-WORKDIR /config
+WORKDIR /
 
 RUN ["/bin/bash", "-c", "echo I am now using bash!"]
